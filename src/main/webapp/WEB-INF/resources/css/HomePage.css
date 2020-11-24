@@ -1,0 +1,211 @@
+/*
+-------------------------------
+Define Slide object features
+-------------------------------
+*/
+/*Wrapper class*/
+.Site_Features_List {
+	width: 1100px;
+	height: 350px;
+	left: 8px;
+	overflow: hidden;/*cut out parts of the image that are not in the box*/
+	border: 1px solid black;/*create black outline*/
+	position: relative;
+}
+
+/*Slide class*/
+.myslides, .ProductSlides{
+	width: 1100px;/*make sure slide fits in wrapper*/
+	object-fit: cover;/*Set group of objects*/
+	display: flex;/*format image to fill space*/
+	flex-direction: column;
+	justify-content: center;
+	transition: all 1s;/*load animation*/
+	border-radius: 2px;
+}
+
+/*Define Slide text box*/
+.SlideText {
+	position: absolute;/*put on top of image*/
+	top: 89%;
+	left: 8px;
+	width: 210px;
+	height: 30px;
+	font-size:20px;
+	color:white;
+	background: black;
+	text-indent: 20px;
+}
+
+#pic{width: 100%;}/*define image resolution*/
+
+.ProductSlides.shifting {
+	transition: right .2s ease-out;/*define slide animation*/
+}
+
+/*
+-------------------------------
+Define side navigation features
+-------------------------------
+*/
+ /* The side navigation menu */
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 2; /* Stay on top of all screen elements */
+	top: 0; /* Stay at the top */
+	left: 0;/* Stay at the left */
+	background-color: #111; /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {color: #f1f1f1;}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+} 
+
+/*
+-------------------------------
+Define Credit Class features
+-------------------------------
+*/
+
+.clear { clear:both; }/*Reset justification*/
+
+/*main credits format*/
+#CenterLine{
+	display: block;
+	/*center div objects*/
+	margin-left: auto;
+	margin-right: auto;
+}
+#SubImage{
+	/*center div objects within relation to the centerline*/
+	position: relative;
+	margin-left: auto;
+	margin-right: auto; 
+	width: 80%;/*div only covers 80% of screen with*/
+}
+
+/*
+-------------------------------
+Define Interactive service objects
+-------------------------------
+*/
+
+.mySlides {display:none}/*hide all slides for better control with java script*/
+ 
+/*create dimentions for a badge button object */
+.badge {
+	border-radius: 0;
+	font-size: 12px;
+	line-height: 1; /*make small so it looks more like a circle */
+	padding: .375rem .5625rem;
+	font-weight: normal;
+}
+
+/*create round edges for a badge object */
+.badge.badge-pill {
+	border-radius: 10rem;
+	background-color: transparent;
+}
+
+/*create color for a badge object */
+.badge.badge-outline-info {
+	color: #000000;
+	border: 1px solid #000000
+}
+
+/*create highlight effect for badge object */
+.badge:hover{
+	cursor:pointer;/*set effect to mouse curser*/
+	background-color: #A9A9A9;
+}
+
+/*create solid color class for Select effect animation */
+.badge.dotfill{ background-color: #A9A9A9;}
+ 
+/*define location on the slide object for the badge button object */
+.navigation{
+	position: absolute;
+	bottom: 0;
+	left: 40%; /*located off center to leave room for label text */
+	width: 100%;
+	height: 30px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;/*must be on top of slides*/
+	top: 50%;/*put in the middle of the slide*/
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;/*declare length of fade in animation */
+	border-radius: 0 3px 3px 0;
+	user-select: none;/*set background to a user object*/
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: white;
+}
+
+/*define container object for drop down window*/
+.dropdown-content {
+	position: absolute;
+	background-color: #f1f1f1;
+	width: 975px;
+	height: 0;/*start in hidden posision*/
+	left: 5%;/*center drop down on main slide */
+	overflow-y: hidden; /* Disable virtical scroll */
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1; /*place on the top*/
+	transition: 0.5s;/*declare length of trasision load effect*/
+}
+
+/*define text charateristics for drop down */
+.dropdown-content p {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align:Center;
+	word-wrap: break-word;/*format text to fit into the drop down box*/
+}

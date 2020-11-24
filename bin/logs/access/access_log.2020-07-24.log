@@ -1,0 +1,113 @@
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:06:49:29 -0400] "GET /login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:06:49:30 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:11:45 -0400] "POST /login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:11:45 -0400] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:11:45 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:11:45 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:13:57 -0400] "POST /Account/ResetPassword HTTP/1.1" 500 14235
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:24:55 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:25:04 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:25:14 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:25:25 -0400] "POST /Account/ResetPassword HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:25:25 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:27:10 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:27:14 -0400] "POST /Account/ResetPassword HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:27:14 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:28:45 -0400] "GET /Account/user/changePassword?token=ba012b17-7d30-4269-9ff0-6097a9cdfa74 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:39:40 -0400] "POST /Account/user/changePassword?token=ba012b17-7d30-4269-9ff0-6097a9cdfa74 HTTP/1.1" 200 7380
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:46:19 -0400] "GET /Account/user/changePassword?token=ba012b17-7d30-4269-9ff0-6097a9cdfa74 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:47:59 -0400] "POST /Account/user/changePassword?token=ba012b17-7d30-4269-9ff0-6097a9cdfa74 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:47:59 -0400] "GET /welcome HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:48:00 -0400] "GET /Shipping/Europe HTTP/1.1" 200 50818
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:49:45 -0400] "GET /Stats/closerecords HTTP/1.1" 200 37183
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:49:48 -0400] "POST /logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:49:48 -0400] "GET /login?logout HTTP/1.1" 500 9597
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /HomePage HTTP/1.1" 200 27000
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/Condaments.jpeg HTTP/1.1" 200 41485
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/Beverages.png HTTP/1.1" 200 43184
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/grain%20cereal.jpg HTTP/1.1" 200 41318
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/Confusing%20Interfaces.PNG HTTP/1.1" 200 54655
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/confections.jpg HTTP/1.1" 200 315715
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/Dairy%20products.jpg HTTP/1.1" 200 1718054
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /FixedAssets/ComponyLogo.png HTTP/1.1" 200 25947
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/meat-pultry.jpg HTTP/1.1" 200 124485
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /FixedAssets/ShopingInterface.PNG HTTP/1.1" 200 27851
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/seafood.jpeg HTTP/1.1" 200 267854
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /ImageAssets/Produce.jpg HTTP/1.1" 200 71131
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /FixedAssets/BrianRodewald1.jpg HTTP/1.1" 200 917302
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /FixedAssets/AaronLarch.jpg HTTP/1.1" 200 995586
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:51 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:51:56 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:09 -0400] "POST /login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:09 -0400] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:09 -0400] "GET /Shipping/Europe HTTP/1.1" 200 50818
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:09 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:12 -0400] "GET /Stats/closerecords HTTP/1.1" 200 37138
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:12 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:53:16 -0400] "POST /logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:56:53 -0400] "GET /login?logout HTTP/1.1" 200 6416
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:56:53 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:56:53 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:05 -0400] "POST /login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:05 -0400] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:05 -0400] "GET /Shipping/Europe HTTP/1.1" 200 50818
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:06 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:08 -0400] "GET /Stats/closerecords HTTP/1.1" 200 37138
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:09 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:10 -0400] "POST /logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:17 -0400] "GET /login?logout HTTP/1.1" 200 6416
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:51 -0400] "POST /login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:51 -0400] "GET / HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:51 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:51 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:57:57 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:58:03 -0400] "POST /Account/ResetPassword HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:58:03 -0400] "GET /Shipping/Pacific HTTP/1.1" 200 7519
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:07:58:03 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:01:56 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:07:07 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:07:07 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:08:11 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:08:11 -0400] "GET /Account/user/changePassword/ HTTP/1.1" 400 9805
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:08:11 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:08:11 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:11:53 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:12:25 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:12:25 -0400] "GET /Account/user/changePassword/?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8141
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:12:25 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:12:25 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:14:30 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:14:51 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 7506
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:14:52 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:14:52 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:15:34 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 7575
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:15:34 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:21:12 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:21:13 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:21:26 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 7721
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:21:26 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:21:26 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:23:21 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:08:23:47 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 7597
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:50:37 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:51:06 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8283
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:51:07 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:51:07 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:21 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8187
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:21 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:21 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:58 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8187
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:58 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:55:58 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:56:36 -0400] "POST /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:56:36 -0400] "GET /welcome HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:56:36 -0400] "GET /Shipping/Europe HTTP/1.1" 200 50818
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:56:36 -0400] "GET /favicon.ico HTTP/1.1" 200 946
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:56:37 -0400] "-" 400 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:57:07 -0400] "POST /logout HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:57:40 -0400] "GET /login?logout HTTP/1.1" 200 6416
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:58:02 -0400] "GET /Account/user/changePassword?token=ffcf6bb4-232c-4c20-8faf-f39ae8cca162 HTTP/1.1" 200 8140
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:12:58:02 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:13:02:24 -0400] "GET /login?logout HTTP/1.1" 500 9597
+0:0:0:0:0:0:0:1 - - [24/Jul/2020:13:02:48 -0400] "GET /login HTTP/1.1" 200 6378

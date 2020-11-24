@@ -1,0 +1,15 @@
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:10:57:01 -0400] "GET /HomePage HTTP/1.1" 500 9607
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:10:57:02 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:10:57:02 -0400] "GET /login HTTP/1.1" 200 6378
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:10:57:46 -0400] "GET /HomePage HTTP/1.1" 500 9607
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /HomePage HTTP/1.1" 200 20155
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/Condaments.jpeg HTTP/1.1" 200 41485
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/Beverages.png HTTP/1.1" 200 43184
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/grain%20cereal.jpg HTTP/1.1" 200 41318
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/meat-pultry.jpg HTTP/1.1" 200 124485
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/confections.jpg HTTP/1.1" 200 315715
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/Produce.jpg HTTP/1.1" 200 71131
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:06 -0400] "GET /ImageAssets/seafood.jpeg HTTP/1.1" 200 267854
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:07 -0400] "GET /ImageAssets/Dairy%20products.jpg HTTP/1.1" 200 1718054
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:07 -0400] "GET /favicon.ico HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [10/Jul/2020:11:06:07 -0400] "GET /login HTTP/1.1" 200 6378
