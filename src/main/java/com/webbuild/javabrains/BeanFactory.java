@@ -26,7 +26,7 @@ public class BeanFactory {
 	
 	@Bean
     public ServletWebServerFactory servletContainer() {
-        // Enable SSL Trafic
+        /* Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override
             protected void postProcessContext(Context context) {
@@ -43,19 +43,19 @@ public class BeanFactory {
         tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnector());
 
         return tomcat;
-    }
+    }*/
 
     /*To redirect from HTTP to HTTPS. Without SSL, this application used
     port 8084. With SSL it will use port 8443. So, any request for 8084 needs to be
-    redirected to HTTPS on 8443.*/
+    redirected to HTTPS on 8443.
     private Connector httpToHttpsRedirectConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
         connector.setPort(8084);
-        //connector.setSecure(false);
-        //connector.setRedirectPort(8443);
+        connector.setSecure(false);
+        connector.setRedirectPort(8443);
         return connector;
-    }
+    }*/
     
     @Bean
 	public JavaMailSender getJavaMailSender() {
