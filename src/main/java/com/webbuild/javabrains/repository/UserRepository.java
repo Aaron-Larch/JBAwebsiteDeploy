@@ -9,6 +9,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
     User findUserByEmail(String Email);
     
+    @Modifying
     @Query(value = "SELECT nextval('roleid_SEQ')", nativeQuery =true)
     int getNextUserId();
 }
