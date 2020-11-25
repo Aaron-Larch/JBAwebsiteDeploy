@@ -24,7 +24,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 public class BeanFactory {
 	//.\keytool –genkey –alias ShippingWebsiteSpringSQL –storetype PKCS12 –keyalg RSA –keysize 2048 –keystore bootsecurity.p12 –validity 3650
 	
-	@Bean
+	/*@Bean
     public ServletWebServerFactory servletContainer() {
         // Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
@@ -47,7 +47,7 @@ public class BeanFactory {
 
     /*To redirect from HTTP to HTTPS. Without SSL, this application used
     port 8084. With SSL it will use port 8443. So, any request for 8084 needs to be
-    redirected to HTTPS on 8443.*/
+    redirected to HTTPS on 8443.
     private Connector httpToHttpsRedirectConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
@@ -55,7 +55,7 @@ public class BeanFactory {
         connector.setSecure(false);
         connector.setRedirectPort(8443);
         return connector;
-    }
+    }*/
     
     @Bean
 	public JavaMailSender getJavaMailSender() {
