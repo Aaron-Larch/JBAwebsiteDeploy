@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.webbuild.javabrains.model.User;
 
 //connect to the user table In the Database
-public interface UserRepository extends JpaRepository<User, int> {
+public interface UserRepository extends JpaRepository<User, Integer> {
     User findByUsername(String username);
     User findUserByEmail(String Email);
 }
