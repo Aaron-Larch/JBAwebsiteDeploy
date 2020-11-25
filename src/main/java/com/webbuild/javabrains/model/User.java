@@ -19,7 +19,7 @@ public class User {
     private byte[] storfile; //make sure types match for zip file
     private String keyquestion;
 	private String keyanswer;
-    private Long roleid;
+    private int roleid;
 
 	@Transient
     private String passwordConfirm;
@@ -59,11 +59,11 @@ public class User {
         this.passwordConfirm = passwordConfirm; // save a value
     }
 
-    public Long getRoleid() {
+    public int getRoleid() {
 		return roleid; //Retrieve a value
 	}
 
-	public void setRoleid(Long roleid) {
+	public void setRoleid(int roleid) {
 		this.roleid = roleid; // save a value
 	}
 	
