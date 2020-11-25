@@ -12,13 +12,28 @@ public class User {
 	@Id //identify primary key
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence") //Set Value to auto populate in database
     @SequenceGenerator(name = "id_Sequence", sequenceName = "roleid_SEQ") //Declare Database Sequence you want to use
+    @Column(name="personid")
     private int PersonID;
+   
+    @Column(name="username")
     private String username;
+	
+    @Column(name="password")
     private String password;
+	
+    @Column(name="email")
     private String email;
+	
+    @Column(name="storfile")
     private byte[] storfile; //make sure types match for zip file
+	
+    @Column(name="keyquestion")
     private String keyquestion;
-	private String keyanswer;
+	
+    @Column(name="keyanswer")
+    private String keyanswer;
+    
+    @Column(name="roleid")
     private int roleid;
 
 	@Transient
