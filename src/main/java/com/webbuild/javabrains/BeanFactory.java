@@ -24,9 +24,9 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 public class BeanFactory {
 	//.\keytool –genkey –alias ShippingWebsiteSpringSQL –storetype PKCS12 –keyalg RSA –keysize 2048 –keystore bootsecurity.p12 –validity 3650
 	
-	@Bean
+	/* @Bean
     public ServletWebServerFactory servletContainer() {
-        /* Enable SSL Trafic
+        // Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
             @Override
             protected void postProcessContext(Context context) {
