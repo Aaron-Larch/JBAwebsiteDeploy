@@ -21,7 +21,7 @@ public class PasswordResetToken {
 
 	@Id //identify primary key
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence") //Set Value to auto populate in database
-	@SequenceGenerator(name = "id_Sequence", sequenceName = "Token_SEQ") //Declare Database Sequence you want to use
+	@SequenceGenerator(name = "id_Sequence", sequenceName = "Token_SEQ", allocationSize = 50) //Declare Database Sequence you want to use
 	private Long Id;
 	private String token;
 	private long userid;
