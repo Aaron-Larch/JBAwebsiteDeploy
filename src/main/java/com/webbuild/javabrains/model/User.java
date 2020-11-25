@@ -11,7 +11,7 @@ public class User {
     
 	@Id //identify primary key
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence") //Set Value to auto populate in database
-    @SequenceGenerator(name = "id_Sequence", sequenceName = "USERS_SEQ") //Declare Database Sequence you want to use
+    @SequenceGenerator(name = "id_Sequence", sequenceName = "roleid_SEQ") //Declare Database Sequence you want to use
     private int PersonID;
     private String username;
     private String password;
