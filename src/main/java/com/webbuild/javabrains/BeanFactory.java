@@ -24,11 +24,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 public class BeanFactory {
 	//.\keytool –genkey –alias ShippingWebsiteSpringSQL –storetype PKCS12 –keyalg RSA –keysize 2048 –keystore bootsecurity.p12 –validity 3650
 	
-<<<<<<< HEAD
-	/*@Bean
-=======
 	/* @Bean
->>>>>>> branch 'main' of https://github.com/Aaron-Larch/JBAwebsiteDeploy.git
     public ServletWebServerFactory servletContainer() {
         // Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
