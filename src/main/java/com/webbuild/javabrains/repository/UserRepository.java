@@ -8,4 +8,7 @@ import com.webbuild.javabrains.model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
     User findUserByEmail(String Email);
+    
+    @Query(value = "SELECT nextval('roleid_SEQ')", nativeQuery =true)
+    Long getNextUserId();
 }
