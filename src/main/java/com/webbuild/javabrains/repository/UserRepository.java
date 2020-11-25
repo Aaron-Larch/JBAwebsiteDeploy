@@ -10,5 +10,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findUserByEmail(String Email);
     
     @Query(value = "SELECT nextval('roleid_SEQ')", nativeQuery =true)
-    Long getNextUserId();
+    int getNextUserId();
 }
