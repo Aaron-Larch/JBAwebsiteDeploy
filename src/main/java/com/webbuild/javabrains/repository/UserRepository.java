@@ -1,6 +1,7 @@
 package com.webbuild.javabrains.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import com.webbuild.javabrains.model.User;
 
@@ -8,8 +9,7 @@ import com.webbuild.javabrains.model.User;
 public interface UserRepository extends JpaRepository<User, Long> {
     User findByUsername(String username);
     User findUserByEmail(String Email);
-    
-    @Modifying
+
     @Query(value = "SELECT nextval('roleid_SEQ')", nativeQuery =true)
     int getNextUserId();
 }
