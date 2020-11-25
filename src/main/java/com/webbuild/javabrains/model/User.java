@@ -11,15 +11,15 @@ public class User {
     
 	@Id //identify primary key
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence") //Set Value to auto populate in database
-    @SequenceGenerator(name = "id_Sequence", sequenceName = "USERS_SEQ") //Declare Database Sequence you want to use
+    @SequenceGenerator(name = "id_Sequence", sequenceName = "roleid_SEQ") //Declare Database Sequence you want to use
     private int PersonID;
     private String username;
     private String password;
     private String email;
     private byte[] storfile; //make sure types match for zip file
     private String keyquestion;
-	private String keyanswer;
-    private Long roleid;
+    private String keyanswer;
+    private int roleid;
 
 	@Transient
     private String passwordConfirm;
@@ -59,11 +59,11 @@ public class User {
         this.passwordConfirm = passwordConfirm; // save a value
     }
 
-    public Long getRoleid() {
+    public int getRoleid() {
 		return roleid; //Retrieve a value
 	}
 
-	public void setRoleid(Long roleid) {
+	public void setRoleid(int roleid) {
 		this.roleid = roleid; // save a value
 	}
 	
