@@ -104,13 +104,24 @@
 		</dependency>
 
 		<!-- Spring Testing dependencies -->
-		<!-- Spring Testing dependencies -->
+		<!-- this is all you need to write tests with JUnit Jupiter -->
 		<dependency>
-			<groupId>junit</groupId>
-        	<artifactId>junit</artifactId>
-        	<version>4.13.1</version>
-        	<scope>test</scope>
-        </dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- this dependency is needed to create parameterized tests -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-params</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- contains the engine that actually runs the Jupiter-tests -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
