@@ -47,8 +47,6 @@ public class UserServiceImpl implements UserService {
         user.setKeyanswer(bCryptPasswordEncoder.encode(user.getKeyanswer()));
         Security.add(roleRepository.findById(user.getRoleid()).get()); //call a single role that matches the user input 
         user.setRoles(Security);
-	            System.out.println(user.getEmail()+" "+user.getKeyanswer()+" "+
-        user.getKeyquestion()+" "+user.getPassword()+" "+user.getUsername()+" "+user.getRoleid());
         userRepository.save(user);
     }
     
