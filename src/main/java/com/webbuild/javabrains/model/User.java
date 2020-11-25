@@ -40,6 +40,7 @@ public class User {
     private String passwordConfirm;
 
     @ManyToMany //Declare value as receiving value from other table
+	@JoinColumn(name="DIVISIONID")
     private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {
