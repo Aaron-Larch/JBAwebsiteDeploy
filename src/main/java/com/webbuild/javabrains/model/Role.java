@@ -37,7 +37,7 @@ public class Role {
         return user; //Retrieve a value
     }
 
-    public void setUsers(Set<User> user) {
-        this.user = user; // save a value
+    public void setUsers(Set<User> users) {
+        this.user = users; // save a value
     }
 }
