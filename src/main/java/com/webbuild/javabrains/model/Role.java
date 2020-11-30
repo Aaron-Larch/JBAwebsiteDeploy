@@ -34,10 +34,10 @@ public class Role {
     }
 
     public Set<User> getUsers() {
-        return users; //Retrieve a value
+        return user; //Retrieve a value
     }
 
     public void setUsers(Set<User> users) {
-        this.users = users; // save a value
+        this.user = users; // save a value
     }
 }

@@ -76,11 +76,11 @@ public class User {
 	}
 	
 	public Set<Role> getRoles() {
-        return roles; //Retrieve a value
+        return role; //Retrieve a value
     }
 
     public void setRoles(Set<Role> roles) {
-        this.roles = roles; // save a value
+        this.role = roles; // save a value
     }
 
 	public byte[] getStorFile() {
