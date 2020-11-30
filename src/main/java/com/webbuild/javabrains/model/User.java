@@ -25,7 +25,7 @@ public class User {
     private String passwordConfirm;
 
     @ManyToMany //Declare value as receiving value from other table
-    private Set<Role> roles; //set a many to many relation with the Role table
+    private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
