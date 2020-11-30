@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
 
     @Override //Create a new user and role pair
     public void save(User user) {
-	user.setId(userRepository.getNextUserId());
+    	user.setId(userRepository.getNextUserId());
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         user.setKeyanswer(bCryptPasswordEncoder.encode(user.getKeyanswer()));
         Security.add(roleRepository.findById(user.getRoleid()).get()); //call a single role that matches the user input 
