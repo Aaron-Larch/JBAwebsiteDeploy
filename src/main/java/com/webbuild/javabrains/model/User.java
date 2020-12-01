@@ -28,7 +28,7 @@ public class User implements Serializable {
     private String passwordConfirm;
 
     @ManyToMany //Declare value as receiving value from other table
-    @JoinColumn(name = "FK_Users_Role", referencedColumnName = "DIVISIONID") // here the exact field name of your comment id in your DB
+    @JoinColumn(foreignKey = @ForeignKey(name = "FK_Users_Role"), referencedColumnName = "DIVISIONID") // here the exact field name of your comment id in your DB
     private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
