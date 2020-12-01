@@ -13,8 +13,8 @@ public class Role {
     private long DIVISIONID;
 
     private String DIVISIONNAME;
-
-    @ManyToMany(mappedBy = "roleid") //Declare reference table
+    
+    @ManyToMany(targetEntity = Employee.class, mappedBy = "roleid" orphanRemoval = false, fetch = FetchType.LAZY) //Declare reference table
     private Set<User> user; //set a many to many relation with the user table
 
     public long getDIVISIONID() {

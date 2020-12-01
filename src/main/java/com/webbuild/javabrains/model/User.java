@@ -3,6 +3,8 @@ package com.webbuild.javabrains.model;
 import javax.persistence.*;
 
 import java.util.Set;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 
 //Define all relevant user data
 @Entity
@@ -24,8 +26,9 @@ public class User {
 	@Transient
     private String passwordConfirm;
 
-    @ManyToMany //Declare value as receiving value from other table
-    @JoinColumn(name = "DIVISIONID", nullable = false)
+    @ManyToMany(fetch = FetchType.LAZY) //Declare value as receiving value from other table
+    @JoinColumn(name = "DIVISIONID", nullable = false, insertable = false, updatable = false)
+    @Fetch(FetchMode.JOIN)
     private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
