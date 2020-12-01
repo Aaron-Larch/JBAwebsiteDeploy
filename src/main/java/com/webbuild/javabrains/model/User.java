@@ -2,30 +2,34 @@ package com.webbuild.javabrains.model;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
 import java.util.Set;
 
 //Define all relevant user data
 @Entity
 @Table(name = "USERS") //Table Reference in database
-public class User {
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = -3009157732242241606L;
     
 	@Id //identify primary key
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "id_Sequence") //Set Value to auto populate in database
-    @SequenceGenerator(name = "id_Sequence", sequenceName = "roleid_SEQ", allocationSize = 50) //Declare Database Sequence you want to use
+    @SequenceGenerator(name = "id_Sequence", sequenceName = "USERS_SEQ") //Declare Database Sequence you want to use
     private int PersonID;
     private String username;
     private String password;
     private String email;
     private byte[] storfile; //make sure types match for zip file
     private String keyquestion;
-    private String keyanswer;
-    private long roleid;
+	private String keyanswer;
+    private Long roleid;
 
 	@Transient
     private String passwordConfirm;
 
-	@ManyToMany //Declare value as receiving value from other table
-	private Set<Role> roles; //set a many to many relation with the Role table
+    @ManyToMany //Declare value as receiving value from other table
+    @JoinColumn(name = "FK_Users_Role", referencedColumnName = "DIVISIONID") // here the exact field name of your comment id in your DB
+    private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
@@ -59,11 +63,11 @@ public class User {
         this.passwordConfirm = passwordConfirm; // save a value
     }
 
-    public long getRoleid() {
+    public Long getRoleid() {
 		return roleid; //Retrieve a value
 	}
 
-	public void setRoleid(long roleid) {
+	public void setRoleid(Long roleid) {
 		this.roleid = roleid; // save a value
 	}
 	

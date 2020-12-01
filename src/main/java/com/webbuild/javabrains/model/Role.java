@@ -1,20 +1,25 @@
 package com.webbuild.javabrains.model;
 
 import javax.persistence.*;
+
+import java.io.Serializable;
 import java.util.Set;
 
 //Call a table in a remote Data base that stores roll names and permissions
 
 @Entity
 @Table(name = "DIVISIONS") //Table Reference in database
-public class Role {
+public class Role implements Serializable {
+	
+	private static final long serialVersionUID = -3009157732242241606L;
+	
     @Id //identify primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long DIVISIONID;
 
     private String DIVISIONNAME;
-    
-    @ManyToMany(mappedBy = "roles") //Declare reference table
+
+    @ManyToMany(mappedBy = "roles", targetEntity = User.class) //Declare reference table
     private Set<User> users; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
