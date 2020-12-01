@@ -14,7 +14,7 @@ public class Role {
 
     private String DIVISIONNAME;
 
-    @ManyToMany(mappedBy = "role") //Declare reference table
+    @ManyToMany(mappedBy = "roleid") //Declare reference table
     private Set<User> user; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
