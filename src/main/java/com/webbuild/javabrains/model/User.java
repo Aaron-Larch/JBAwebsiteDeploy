@@ -3,8 +3,6 @@ package com.webbuild.javabrains.model;
 import javax.persistence.*;
 
 import java.util.Set;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 //Define all relevant user data
 @Entity
@@ -26,10 +24,8 @@ public class User {
 	@Transient
     private String passwordConfirm;
 
-    @ManyToMany(fetch = FetchType.LAZY) //Declare value as receiving value from other table
-    @JoinColumn(name = "DIVISIONID", nullable = false, insertable = false, updatable = false)
-    @Fetch(FetchMode.JOIN)
-    private Set<Role> role; //set a many to many relation with the Role table
+	@ManyToMany //Declare value as receiving value from other table
+	private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
@@ -80,11 +76,11 @@ public class User {
 	}
 	
 	public Set<Role> getRoles() {
-        return role; //Retrieve a value
+        return roles; //Retrieve a value
     }
 
     public void setRoles(Set<Role> roles) {
-        this.role = roles; // save a value
+        this.roles = roles; // save a value
     }
 
 	public byte[] getStorFile() {

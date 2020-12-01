@@ -14,8 +14,8 @@ public class Role {
 
     private String DIVISIONNAME;
     
-    @ManyToMany(targetEntity = User.class, mappedBy = "roleid" orphanRemoval = false, fetch = FetchType.LAZY) //Declare reference table
-    private Set<User> user; //set a many to many relation with the user table
+    @ManyToMany(mappedBy = "roles") //Declare reference table
+    private Set<User> users; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
         return DIVISIONID; //Retrieve a value
@@ -34,10 +34,10 @@ public class Role {
     }
 
     public Set<User> getUsers() {
-        return user; //Retrieve a value
+        return users; //Retrieve a value
     }
 
     public void setUsers(Set<User> users) {
-        this.user = users; // save a value
+        this.users = users; // save a value
     }
 }
