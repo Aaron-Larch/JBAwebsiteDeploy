@@ -19,7 +19,7 @@ public class Role implements Serializable {
 
     private String DIVISIONNAME;
 
-    @ManyToMany(mappedBy = "roles", targetEntity = User.class) //Declare reference table
+    @ManyToMany(mappedBy = "role", targetEntity = User.class) //Declare reference table
     private Set<User> users; //set a many to many relation with the user table
 
     public long getDIVISIONID() {

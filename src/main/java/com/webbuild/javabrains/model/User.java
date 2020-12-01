@@ -29,7 +29,7 @@ public class User implements Serializable {
 
     @ManyToMany //Declare value as receiving value from other table
     @JoinColumn(name = "FK_Users_Role", referencedColumnName = "DIVISIONID") // here the exact field name of your comment id in your DB
-    private Set<Role> roles; //set a many to many relation with the Role table
+    private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
@@ -80,11 +80,11 @@ public class User implements Serializable {
 	}
 	
 	public Set<Role> getRoles() {
-        return roles; //Retrieve a value
+        return role; //Retrieve a value
     }
 
     public void setRoles(Set<Role> roles) {
-        this.roles = roles; // save a value
+        this.role = roles; // save a value
     }
 
 	public byte[] getStorFile() {
