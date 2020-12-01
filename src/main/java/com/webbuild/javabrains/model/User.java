@@ -29,7 +29,8 @@ public class User implements Serializable {
 
     @ManyToMany //Declare value as receiving value from other table
     @JoinColumn(name = "FK_Users_Role", 
-            joinColumns =  @JoinColumn(name="DIVISIONID") // here the exact field name of your comment id in your DB
+            joinColumns =  @JoinColumn(name="DIVISIONID")
+    		)// here the exact field name of your comment id in your DB
     private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
