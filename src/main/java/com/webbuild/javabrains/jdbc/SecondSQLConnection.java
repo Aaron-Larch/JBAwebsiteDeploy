@@ -72,7 +72,7 @@ public class SecondSQLConnection {
 				}
 			}
 			state.close();
-			sta.close();//close off server connection. release use resources 
+			//sta.close();//close off server connection. release use resources 
 			return items;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -101,7 +101,7 @@ public class SecondSQLConnection {
 						rs.getDouble("Discount")
 				));
 			}
-			sta.close();//close off server connection. release use resources 
+			//sta.close();//close off server connection. release use resources 
 			return orderDe;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
