@@ -26,10 +26,6 @@ public class User implements Serializable {
 
 	@Transient
     private String passwordConfirm;
-
-	
-	@ManyToMany(cascade = CascadeType.ALL)
-   
 	
 	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY) //Declare value as receiving value from other table
 	@JoinTable(
