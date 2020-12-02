@@ -29,11 +29,11 @@ public class User implements Serializable {
 	
 	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY) //Declare value as receiving value from other table
 	@JoinTable(
-			name = "users_role", //declare foren key name
+			name = "users_DIVISIONS", //declare foren key name
 			joinColumns = @JoinColumn(name = "users_roleid", referencedColumnName = "roleid"), //declare users table
 			inverseJoinColumns = @JoinColumn(name = "role_DIVISIONID", referencedColumnName = "DIVISIONID")//declare divisions table 
 			) 
-    private Set<Role> role; //set a many to many relation with the Role table
+    private Set<Role> DIVISIONS; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
@@ -84,11 +84,11 @@ public class User implements Serializable {
 	}
 	
 	public Set<Role> getRoles() {
-        return role; //Retrieve a value
+        return DIVISIONS; //Retrieve a value
     }
 
-    public void setRoles(Set<Role> roles) {
-        this.role = roles; // save a value
+    public void setRoles(Set<Role> DIVISIONS) {
+        this.DIVISIONS = DIVISIONS; // save a value
     }
 
 	public byte[] getStorFile() {
