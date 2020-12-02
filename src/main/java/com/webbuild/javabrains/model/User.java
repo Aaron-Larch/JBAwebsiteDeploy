@@ -27,8 +27,15 @@ public class User implements Serializable {
 	@Transient
     private String passwordConfirm;
 
-    @ManyToMany //Declare value as receiving value from other table
-    @JoinColumn(name="DIVISIONID", nullable=true) // here the exact field name of your comment id in your DB
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+   
+	
+	@ManyToMany(cascade = CascadeType.ALL) //Declare value as receiving value from other table
+	@JoinTable(
+			name = "users_role", //declare foren key name
+			joinColumns = @JoinColumn(name = "users_roleid", referencedColumnName = "roleid"), //declare users table
+			inverseJoinColumns = @JoinColumn(name = "role_DIVISIONID", referencedColumnName = "DIVISIONID")) //declare divisions table 
     private Set<Role> role; //set a many to many relation with the Role table
     
     public int getId() {
