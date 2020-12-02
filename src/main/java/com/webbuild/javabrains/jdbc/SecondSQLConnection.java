@@ -24,6 +24,7 @@ public class SecondSQLConnection {
 	public static Connection dbConnect() {
 		try {
 			// create a handshake connection between java and the desired SQL server. 
+			Class.forName("org.postgresql.Driver");
 			URI dbUri = new URI(System.getenv(DATABASE_URL));
 
 			//Separate key items from URI 
@@ -39,7 +40,7 @@ public class SecondSQLConnection {
 		}catch(Exception e){
 			//error handling
 			System.err.println("Got an exception! ");
-			System.err.println(e.getMessage());
+			System.err.println(e.getClass().getName()+": "+e.getMessage());
 			return null;
 		}
 	}
