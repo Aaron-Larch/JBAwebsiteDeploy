@@ -17,31 +17,35 @@ import com.webbuild.javabrains.model.Products;
 public class SecondSQLConnection {
 	//Static Server connection Data Source
 	private static String DATABASE_URL = "postgres://hdbmcmpbanzxib:25c89265145e7b8c6ade73cbd530502300a7ac140b1c1e68d45d84fa4b86eab7@ec2-54-157-88-70.compute-1.amazonaws.com:5432/d8ajqksjp4lbaj";
+	private static Connection conn; //stored connection veriabule to save on connections
 	static List<OrderDetails> orderDe;
 	static List<Products> items;
 
 	//connect to a remote web server
 	public static Connection dbConnect() {
-		try {
-			// create a handshake connection between java and the desired SQL server. 
-			URI dbUri = new URI(DATABASE_URL);
-			
-			//Separate key items from URI 
-			String username = dbUri.getUserInfo().split(":")[0];
-			String password = dbUri.getUserInfo().split(":")[1];
-				
-			//Recombine Uri information into a url connection statement
-			String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-			Connection conn = DriverManager.getConnection(dbUrl, username, password);//establish connection
-			System.out.println("Opened database successfully");
-			return conn;		
-		}catch(Exception e){
-			//error handling
-			System.err.println("Got an exception! ");
-			System.err.println(e.getClass().getName()+": "+e.getMessage());
-	        System.exit(0);
-	        return null;
-	      }
+		//check to see if connection is astablished
+		if (conn == null) {
+			try {
+				// create a handshake connection between java and the desired SQL server. 
+				URI dbUri = new URI(DATABASE_URL);
+					
+			    //Separate key items from URI 
+			    String username = dbUri.getUserInfo().split(":")[0];
+			    String password = dbUri.getUserInfo().split(":")[1];
+						
+			    //Recombine Uri information into a url connection statement
+			    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+			    conn = DriverManager.getConnection(dbUrl, username, password);//establish connection
+			    System.out.println("Opened database successfully");		
+			}catch(Exception e){
+				//error handling
+			    System.err.println("Got an exception! ");
+			    System.err.println(e.getClass().getName()+": "+e.getMessage());
+			    System.exit(0); 
+			}
+			return conn; //create new connection
+		}
+		return conn; //return old connection
 	}
 
 	//Find each unique product and display generic user information
@@ -72,7 +76,7 @@ public class SecondSQLConnection {
 				}
 			}
 			state.close();
-			//sta.close();//close off server connection. release use resources 
+			sta.close();//close off server connection. release use resources 
 			return items;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
