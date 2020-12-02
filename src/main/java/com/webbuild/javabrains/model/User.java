@@ -31,7 +31,7 @@ public class User implements Serializable {
 	@ManyToMany(cascade = CascadeType.ALL)
    
 	
-	@ManyToMany(cascade = CascadeType.ALL) //Declare value as receiving value from other table
+	@ManyToMany //Declare value as receiving value from other table
 	@JoinTable(
 			name = "users_role", //declare foren key name
 			joinColumns = @JoinColumn(name = "users_roleid", referencedColumnName = "roleid"), //declare users table
