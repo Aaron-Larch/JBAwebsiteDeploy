@@ -24,25 +24,24 @@ public class SecondSQLConnection {
 	public static Connection dbConnect() {
 		try {
 			// create a handshake connection between java and the desired SQL server. 
-			Class.forName("org.postgresql.Driver");
-			URI dbUri = new URI(System.getenv(DATABASE_URL));
-
+			URI dbUri = new URI(DATABASE_URL);
+			
 			//Separate key items from URI 
 			String username = dbUri.getUserInfo().split(":")[0];
 			String password = dbUri.getUserInfo().split(":")[1];
-					
+				
 			//Recombine Uri information into a url connection statement
 			String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
-
 			Connection conn = DriverManager.getConnection(dbUrl, username, password);//establish connection
-			return conn;
-					
+			System.out.println("Opened database successfully");
+			return conn;		
 		}catch(Exception e){
 			//error handling
 			System.err.println("Got an exception! ");
 			System.err.println(e.getClass().getName()+": "+e.getMessage());
-			return null;
-		}
+	        System.exit(0);
+	        return null;
+	      }
 	}
 
 	//Find each unique product and display generic user information
