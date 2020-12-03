@@ -27,7 +27,7 @@ public class User implements Serializable {
 	@Transient
     private String passwordConfirm;
 	
-	@OneToOne //Declare value as receiving value from other table
+	@ManyToOne //Declare value as receiving value from other table
     private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {
