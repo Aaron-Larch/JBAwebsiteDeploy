@@ -3,6 +3,7 @@ package com.webbuild.javabrains.model;
 import javax.persistence.*;
 
 import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Set;
 
 //Call a table in a remote Data base that stores roll names and permissions
@@ -19,7 +20,7 @@ public class Role implements Serializable {
 
     private String DIVISIONNAME;
 
-    @OneToMany(fetch = FetchType.LAZY, optional = false)//Declare reference table
+    @OneToMany(fetch = FetchType.LAZY)//Declare reference table
     @JoinColumn(name = "users_roleid", nullable = false)
     @JsonIgnore 
     private Set<User> user; //set a many to many relation with the user table
