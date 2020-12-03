@@ -22,7 +22,7 @@ public class Role implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, optional = false)//Declare reference table
     @JoinColumn(name = "users_roleid", nullable = false)
     @JsonIgnore 
-    private Set<User> users; //set a many to many relation with the user table
+    private Set<User> user; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
         return DIVISIONID; //Retrieve a value
@@ -41,10 +41,10 @@ public class Role implements Serializable {
     }
 
     public Set<User> getUsers() {
-        return users; //Retrieve a value
+        return user; //Retrieve a value
     }
 
     public void setUsers(Set<User> users) {
-        this.users = users; // save a value
+        this.user = users; // save a value
     }
 }
