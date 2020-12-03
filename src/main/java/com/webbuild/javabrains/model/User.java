@@ -27,11 +27,7 @@ public class User implements Serializable {
 	@Transient
     private String passwordConfirm;
 	
-	@ManyToMany//Declare value as receiving value from other table
-	@JoinTable(
-			  name = "users_roles", 
-			  joinColumns = @JoinColumn(name = "users_roleid"), 
-			  inverseJoinColumns = @JoinColumn(name = "DIVISIONS_DIVISIONID"))
+	@ManyToOne(mappedBy = "users", cascade = CascadeType.ALL, fetch = FetchType.LAZY)//Declare value as receiving value from other table
     private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {

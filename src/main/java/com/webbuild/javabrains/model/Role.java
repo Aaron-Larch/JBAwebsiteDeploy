@@ -19,7 +19,9 @@ public class Role implements Serializable {
 
     private String DIVISIONNAME;
 
-    @ManyToMany(mappedBy = "roles") //Declare reference table
+    @OneToMany(fetch = FetchType.LAZY, optional = false)//Declare reference table
+    @JoinColumn(name = "users_roleid", nullable = false)
+    @JsonIgnore 
     private Set<User> users; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
