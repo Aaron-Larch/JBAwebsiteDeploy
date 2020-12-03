@@ -20,9 +20,7 @@ public class Role implements Serializable {
 
     private String DIVISIONNAME;
 
-    @OneToMany(fetch = FetchType.LAZY)//Declare reference table
-    @JoinColumn(name = "users_roleid", nullable = false)
-    @JsonIgnore 
+    @ManyToMany//Declare reference table
     private Set<User> user; //set a many to many relation with the user table
 
     public long getDIVISIONID() {
