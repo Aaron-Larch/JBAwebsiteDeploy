@@ -27,8 +27,8 @@ public class User implements Serializable {
 	@Transient
     private String passwordConfirm;
 	
-	@ManyToMany //Declare value as receiving value from other table
-    private Set<Role> DIVISIONS; //set a many to many relation with the Role table
+	@OneToOne //Declare value as receiving value from other table
+    private Set<Role> roles; //set a many to many relation with the Role table
     
     public int getId() {
         return PersonID; //Retrieve a value
@@ -79,11 +79,11 @@ public class User implements Serializable {
 	}
 	
 	public Set<Role> getRoles() {
-        return DIVISIONS; //Retrieve a value
+        return roles; //Retrieve a value
     }
 
-    public void setRoles(Set<Role> DIVISIONS) {
-        this.DIVISIONS = DIVISIONS; // save a value
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles; // save a value
     }
 
 	public byte[] getStorFile() {
