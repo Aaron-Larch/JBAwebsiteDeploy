@@ -44,10 +44,12 @@ public class UserController {
 
     //Verify that collected data meets the required security parameters before saving to database
     @PostMapping("/registration")
-    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult); //Check Object for errors
 
         if (bindingResult.hasErrors()) {
+        	model.addAttribute("questionsList", Store.getQuestions()); //get a list of security questions
+        	model.addAttribute("Rolelist", roleRepository.findAll()); //set roles to a list
             return "UserInterFace/registration"; //If errors found retun to page with error message
         }
         userService.save(userForm); //if no errors found save
