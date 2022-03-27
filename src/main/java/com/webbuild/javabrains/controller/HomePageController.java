@@ -92,7 +92,7 @@ public class HomePageController {
 		model.addObject("discript", discript);
     	model.addObject("Data", array);
     	model.addObject("test", "Products and services we offer."); //create message
-    	model.setViewName("HomePageTest");//declare page url
+    	model.setViewName("Itd110project/ProductIntercation");//declare page url
         return model;  //go to jsp page
     }
     
