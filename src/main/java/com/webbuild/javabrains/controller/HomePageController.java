@@ -40,7 +40,7 @@ public class HomePageController {
 		model.addObject("partners", Ship);
     	model.addObject("Data", array);
     	model.addObject("test", "Products and services we offer."); //create message
-    	model.setViewName("HomePageTest");//declare page url
+    	model.setViewName("Index");//declare page url
         return model;  //go to jsp page
     }
 	
