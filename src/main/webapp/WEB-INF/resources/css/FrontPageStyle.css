@@ -3,7 +3,7 @@
 
 body {
     padding-bottom: 40px;
-    background-color: #eee;
+    background-color: rgb(192, 192, 192);
 }
 
 /* Style the header */
@@ -16,10 +16,12 @@ body {
 	border-radius: 15px;
 }
 
-/* Style the corporate logo */
-p.Menue{
-	float:left;
+#menue{
+	padding-top: 10px;
 }
+
+/* Style the corporate logo */
+
 span.c {
 	float:left;
 	color: gold;
@@ -30,15 +32,18 @@ span.Icon{
 	font-size:50px;
 	cursor:pointer;
 	float:left;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 5px;
 }
 
-#topBanner h1{
+#topBanner{
 	float: left;
+	float: right;
 	width: 90%;
 	text-align: center;
-	padding-left: 150px;	
+	padding-left: 150px;
 	position: absolute;
-	top: 0;
 	
 }
 
@@ -91,9 +96,48 @@ Define navigation menu features
 
 /*
 -------------------------------
+Define Home page add
+-------------------------------
+*/
+#Siteadd{
+	float: left;
+	float: right;
+	width: 90%;
+	text-align: center;
+	padding-left: 150px;
+	position: absolute;
+	
+}
+
+/*
+-------------------------------
+Define partners guidelines object features
+-------------------------------
+*/
+#banner{
+	float: right;
+	background:  rgb(192, 192, 192);
+	width: 35%;
+	height: 100vh;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 15px;
+	border-style: outset;
+	border-radius: 15px;
+
+}
+#partners{
+	float: left;
+	width: 60%;
+}
+
+/*
+-------------------------------
 Define Slide object features
 -------------------------------
 */
+
+#Placeholder{text-align: center;}
 /*Wrapper class*/
 .Site_Features_List {
 	width: 1100px;
@@ -102,6 +146,7 @@ Define Slide object features
 	overflow: hidden;/*cut out parts of the image that are not in the box*/
 	border: 1px solid black;/*create black outline*/
 	position: relative;
+	margin: auto;
 }
 
 /*Slide class*/
@@ -221,7 +266,7 @@ Define Interactive service objects
 	transition: 0.5s;/*declare length of trasision load effect*/
 }
 
-/*define text charateristics for drop down */
+/*define text chargb(64, 0, 64), 64)cs for drop down */
 .dropdown-content p {
 	color: black;
 	padding: 12px 16px;
@@ -237,18 +282,20 @@ Define footer features
 -------------------------------
 */
 footer{
-	position: absolute;
 	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 200px;
+	height: 160px;
 	width: 100%;
 	border-radius: 150px 150px 0 0;
-	background-color: lightblue;
+	background-color: rgba(255, 255, 255, .5);
 	clear:both;
 	text-align:center;
 	font-size:.8em;
 	padding-top:50px;
+	position: fixed;
+	
+
 }
 
 #container, footer{

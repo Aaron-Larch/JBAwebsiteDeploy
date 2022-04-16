@@ -19,7 +19,7 @@
   </head>
 </head>
 <body>
-		<!-- A stylish Header that contains all futuer user options -->
+<!-- A stylish Header that contains all futuer user options -->
  	<div id="mySidenav" class="sidenav"><!-- Drop down menu layout -->
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a onclick="switchStateBtn('Step4')" class='menuLinks' href="HomePage">Home</a>
@@ -29,18 +29,19 @@
 		<spring:url value="${contextPath}/login" var="StartURL" />
 		<a id="LoadFile" href="${StartURL }" class='menuLinks'>Login</a>.
 	</div>
-   
-  <div id="topBanner" class="headder">
-  	<span style="font-size:50px; cursor:pointer; float:left;" onclick="openNav()" id="Openmenue">&#9776;</span>
-  	<p class="Menu">
-	<span style="font-size:25px;">JBA Shipping Inc.</span><br>
- 	<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
- 	</p>
- 	<h1 class="title">Learn more about the team</h1><br>
-   <hr style="background-color:white;"/>
-</div>
-
-    <div id="test">
+ 
+	<div class="headder">
+		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
+  		<div id="menue">
+  			<h1 id="topBanner" >Learn more about the team</h1>
+			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
+ 			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
+ 		</div>
+   		<hr style="background-color:white;"></hr>
+	</div>
+	
+	<div id="test" style="position: relative; min-height: 330vh;">
+	<div id="body">
     <img id="CenterLine" src="${contextPath}/FixedAssets/ComponyLogo.png" alt="Logo" width="300" height="200"/>
 		<br><br>
 		<img id="CenterLine" src="${contextPath}/FixedAssets/AaronLarch.jpg" alt="Founder" width="800" height="900"/>
@@ -50,12 +51,11 @@
 		and with the help from his co founder Built a Reports page.<br>
 		Click Here to see what the sight has to offer:</p>
 		<br>
-		insert button to play a video here.
 		<br><br>
 		<div id="SubImage">
 			<img id="Cofounder" src="${contextPath}/FixedAssets/BrianRodewald1.jpg" 
 				style="float: left; margin-right: 15px;" alt="Co-Founder" width="350" height="450"/>
-			<h2><br><br>
+			<h2 style= "font-family: Verdana, sans-serif; font-style: italic;"><br><br>
 			This is our Sites co-founder</h2>
 			<p style="text-align:center;"> Co-founder Brian built 2 web pages for this sight. He 
 			Desinged part of the logic behind the Graphing software as well as cleaned up chart data generating subrutines.
@@ -65,7 +65,7 @@
 				<div id="SubImage">
 			<img id="ArtConsultant" src="${contextPath}/FixedAssets/BenGibbs.jpg" 
 				style="float: left; margin-right: 15px;" alt="Co-Founder" width="350" height="320"/>
-			<h2><br><br>
+			<h2  style= "font-family: Verdana, sans-serif; font-style: italic;"><br><br>
 			This is our Sites Graphic Arts Consultant</h2>
 			<p style="text-align:center;"> Ben Gibbs Is responsibule for all of the art assets for the web Site.
 			He Desinged formated and cropped all of the royalty free art assets you see on this Sight. He and His
@@ -88,10 +88,15 @@
 		<div class="clear"></div><br><br>
 		<p  style="text-align:Center;">To contact us for an interview please call us at 111-222-3333 or go to a place that dose not exist</p>
     </div>
-</body>
-
-    <footer>
-	<hr style="background-color:black;" />
-	Copyright &copy; 2020. All rights reserved
+    <br>
+<footer>
+	<hr style="background-color:black; width: 70%;" />
+	<p>Copyright &copy; 2020. All rights reserved <br>
+	For more information please feel free to contact us at 
+	<a href="mailto:a.larch@yahoo.com">hege@example.com</a><br>
+	Or call us at 555-444-5678 and we will ignore your questions</p>
 </footer>
+</div>
+<script> navAnimate(document.getElementById("mySidenav"));</script>
+</body>
 </html>

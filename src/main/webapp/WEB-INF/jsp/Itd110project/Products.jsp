@@ -4,21 +4,17 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<!DOCTYPE html>
+    <c:set var="contextPath" value="${pageContext.request.contextPath}"/> 
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-  <head>
-		<title>The things we sell</title>
+	<title>Products to Buy.</title>
 	<link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  		<style><%@include file="../../resources/css/FrontPageStyle.css"%></style>
-		<script><%@include file="../../resources/js/reportfunctions.js"%></script>
-  </head>
+	<style><%@include file="../../resources/css/FrontPageStyle.css"%></style>
+	<script><%@include file="../../resources/js/reportfunctions.js"%></script>
 </head>
 <body>
 	<!-- A stylish Header that contains all futuer user options -->
@@ -31,18 +27,20 @@
 		<spring:url value="${contextPath}/login" var="StartURL" />
 		<a id="LoadFile" href="${StartURL }" class='menuLinks'>Login</a>.
 	</div>
-   
-  <div id="topBanner" class="headder">
-  	<span style="font-size:50px; cursor:pointer; float:left;" onclick="openNav()" id="Openmenue">&#9776;</span>
-  	<p class="Menu">
-	<span style="font-size:25px;">JBA Shipping Inc.</span><br>
- 	<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
- 	</p>
- 	<h1 class="title">Check out Our Products</h1><br>
-   <hr style="background-color:white;"/>
-</div>
+
+	<div class="headder">
+		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
+  		<div id="menue">
+  			 <h1 id="topBanner" >Some of the products we offer</h1>
+			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
+ 			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
+ 		</div>
+   		<hr style="background-color:white;"></hr>
+	</div>
 	
-	<div id="Placeholder" class="slideshow">${test}
+	<div id="test" style="position: relative;">
+	<div id="Placeholder" class="slideshow">
+		${test}
 		<div id="slider" class="Site_Features_List">
 			<c:forEach var="img" items="${imageUrlList}">  
 				<div id="silde" class="ProductSlides">
@@ -50,21 +48,28 @@
 					<p class="SlideText"><span>${fn:substringBefore(img, ".")}</span></p>
 				</div>
 			</c:forEach>
-			<canvas class="ProductSlides" id="chartContainer"></canvas>
+			<div id="silde" class="ProductSlides">
+				<canvas class="ProductSlides" id="chartSampler"></canvas>
+				<p class="SlideText"><span>Dynamic Charts</span></p>
+			</div>	
 		</div>
+		<p>
+			This is a list of all the products we have in our store. To lean more about these wonderful products please click the link below.<br>
+			<a href="ProdutIntercation">The link Below</a>
+		</p>
 	</div>
-	<p>This is a list of all the products we have in our store. To lean more about these wonderful products please click the link below.<br>
-	<a href="/ProdutIntercation">The link Below</a>
-	</p>
+    <br>
+	<footer>
+		<hr style="background-color:black; width: 70%;" />
+		<p>Copyright &copy; 2020. All rights reserved <br>
+		For more information please feel free to contact us at 
+		<a href="mailto:a.larch@yahoo.com">hege@example.com</a><br>
+		Or call us at 555-444-5678 and we will ignore your questions</p>
+	</footer>
+	</div>
 <script>
-var slideIndex = 1;	
-	
-	//this method is used to hide the backend funktions
-	PageSetUp(document.getElementById("mySidenav"), slideIndex, ${Arrays.toString(Data)});
+	navAnimate(document.getElementById("mySidenav"));
+	newSetUp(1, ${Arrays.toString(Sample)});
 </script>
 </body>
-    <footer>
-	<hr style="background-color:black;" />
-	Copyright &copy; 2020. All rights reserved
-</footer>
 </html>

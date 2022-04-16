@@ -30,29 +30,36 @@
 		<a id="LoadFile" href="${StartURL }" class='menuLinks'>Login</a>.
 	</div>
    
-  <div id="topBanner" class="headder">
-  	
-  	<p class="Menu">
-  	<span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span>
-	<span style="font-size:30px;">JBA Shipping Inc.</span><br>
- 	<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
- 	</p>
- 	<h1 class="title">Welcome to JBA shipping!</h1>
-   <hr style="background-color:white;"/>
-</div>
-
-<div id="Siteadd">
-<iframe width="420" height="345" src="https://www.youtube.com//embed/j7atEB_RBws"></iframe><br><br>
-<p>This Video is not mine in any way shape or form. This video made by the people at Meow Wolf please go to their Youttube channel to see more of there videos</p><br>
-<a href="https://www.youtube.com/c/meowwolf">Meow Wolf youtube channel</a>
-<p>If you would like to learn more about Meow Wolf or see one of their packs or attactions please check out their website. It's much better than this one i promice</p><br>
-<a href="https://meowwolf.com/">Meow Wolf homepage</a>
-</div>
-
-    <footer>
-	<hr style="background-color:black;" />
-	Copyright &copy; 2020. All rights reserved
-</footer>
-
+	<div class="headder">
+		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
+  		<div id="menue">
+  			<h1 id="topBanner" >Welcome to the JBA Homepage</h1>
+			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
+ 			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
+ 		</div>
+   		<hr style="background-color:white;"></hr>
+	</div>
+	
+	<div id="test" style="position: relative; min-height: 120vh;">
+		<h1 id="topBanner" >Welcome Here is a friendly add to tell you all about us.</h1>
+		<div id="Siteadd">
+			<br><br><br><br><!-- padding to place the video and adds correctly -->
+			<iframe width="620" height="445" src="https://www.youtube.com//embed/j7atEB_RBws" controls='autoplay'></iframe><br><br>
+			<p>This Video is not mine in any way shape or form. This video made by the people at Meow Wolf please go to their Youttube channel to see more of there videos</p>
+			<a href="https://www.youtube.com/c/meowwolf">Meow Wolf youtube channel</a><br>
+			<br>
+			<p>If you would like to learn more about Meow Wolf or see one of their packs or attactions please check out their website. It's much better than this one i promice</p>
+			<a href="https://meowwolf.com/">Meow Wolf homepage</a>
+		</div>
+		<br>
+		<footer>
+			<hr style="background-color:black; width: 70%;" />
+			<p>Copyright &copy; 2020. All rights reserved <br>
+			For more information please feel free to contact us at 
+			<a href="mailto:a.larch@yahoo.com">hege@example.com</a><br>
+			Or call us at 555-444-5678 and we will ignore your questions</p>
+		</footer>
+	</div>
+	<script> navAnimate(document.getElementById("mySidenav"));</script>
 </body>
 </html>

@@ -17,6 +17,7 @@ import com.webbuild.javabrains.repository.ShippersRepository;
 
 @Controller
 public class HomePageController {
+
 	@Autowired //call data table and all stored functions
 	ShippersRepository shippersservice;
 	
@@ -40,7 +41,7 @@ public class HomePageController {
 		model.addObject("partners", Ship);
     	model.addObject("Data", array);
     	model.addObject("test", "Products and services we offer."); //create message
-    	model.setViewName("Index");//declare page url
+    	model.setViewName("HomePageTest");//declare page url
         return model;  //go to jsp page
     }
 	
@@ -57,6 +58,7 @@ public class HomePageController {
 		model.setViewName("Itd110project/Partners");//declare page url
         return model;  //go to jsp page
 	}
+	
 	@RequestMapping("/Products")
 	public ModelAndView Products() {
 		ModelAndView model = new ModelAndView();//new server object
@@ -70,7 +72,8 @@ public class HomePageController {
 		
 		//populate server object
 		model.addObject("imageUrlList", imageUrlList);
-		model.addObject("Data", array);
+		model.addObject("Sample", array);
+		model.addObject("test", "Products and services we offer."); //create message
 		model.setViewName("Itd110project/Products");//declare page url
 		return model;
 	}

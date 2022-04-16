@@ -14,15 +14,29 @@
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   		<style><%@include file="../../resources/css/common.css"%></style>
+  		<style><%@include file="../../resources/css/FrontPageStyle.css"%></style>
+  		<script><%@include file="../../resources/js/reportfunctions.js"%></script>
   </head>
-
   <body>
-   <!-- A stylish Header that contains all futuer user options -->
-  <div class="headder">
-  <h2>JBA Shipping Inc.</h2>
-  <p class="c">We Deliver the Best to Deliver You Success</p>
-   <hr style="background-color:white;"/>
-</div>
+ <!-- A stylish Header that contains all futuer user options -->
+ 	<div id="mySidenav" class="sidenav"><!-- Drop down menu layout -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a onclick="switchStateBtn('Step4')" class='menuLinks' href="HomePage">Home</a>
+		<a onclick="switchStateBtn('Step1')" class='menuLinks' href="AboutUs">About</a>
+		<a onclick="switchStateBtn('Step2')" class='menuLinks' href="Products">Services</a>
+		<a onclick="switchStateBtn('Step3')" class='menuLinks' href="Partners">Partners</a>
+		<spring:url value="${contextPath}/login" var="StartURL" />
+		<a id="LoadFile" href="${StartURL }" class='menuLinks'>Login</a>.
+	</div>
+ 
+	<div class="headder">
+		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
+  		<div id="menue">
+			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
+ 			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
+ 		</div>
+   		<hr style="background-color:white;"></hr>
+	</div>
 
      <div class="container">
       <form method="POST" action="${contextPath}/login" class="form-signin">
@@ -44,10 +58,10 @@
         </div>
       </form>
     </div>
-    
     <footer>
 	<hr style="background-color:black;" />
 	Copyright &copy; 2020. All rights reserved
 </footer>
+<script> navAnimate(document.getElementById("mySidenav"));</script>
   </body>
 </html>
