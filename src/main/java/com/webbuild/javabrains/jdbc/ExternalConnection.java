@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.webbuild.javabrains.model.Shippers;
 import com.webbuild.javabrains.model.TableObjects;
 
 
@@ -226,6 +227,45 @@ public class ExternalConnection{
 				System.err.println(e.getMessage());
 				return null;
 			}	
+		}
+		
+		//Insert a new line into the Shippers table with the information on the data layer
+		public static void addPartner(Shippers TableData) {
+			try {
+				// create the java statement
+				Statement sta = dbConnect().createStatement();
+				ResultSet rs;
+				int storage=0;
+				//create a dynamic ID query
+				String IdCountQuery = "SELECT shipperid FROM shippers WHERE shipperid = (SELECT MAX(shipperid) FROM shippers)";
+				rs = sta.executeQuery(IdCountQuery);//fetch the latest ID value
+				
+				while (rs.next()) {
+				storage=rs.getInt("shipperid"); //set to int value
+				storage++; //Increment it by 1
+				
+				System.out.println(TableData.getCompanyName()+", "+ TableData.getAddress()+", "+storage);
+				
+				//insert statement
+				String insertStatement = "insert into Shippers "+
+				"(COMPANYNAME, PHONE, SHIPPERID)"+
+							  "values ('"+TableData.getCompanyName()+"', '"+
+							   	TableData.getAddress()+"', '"+
+							   	storage+"')";
+					
+				//Insert new Shipper
+				sta.executeUpdate(insertStatement);
+				}
+				//commit changes
+				sta.executeQuery("COMMIT");
+				System.out.println("Commit Executed");
+				sta.close();//close off server connection. release use resources 
+				System.out.println("Database updated");
+			}catch(Exception e){
+				//error handling
+				System.err.println("Got an exception!");
+				System.err.println(e.getMessage());
+			}
 		}
 		
 		//test lab method for ease of debugging

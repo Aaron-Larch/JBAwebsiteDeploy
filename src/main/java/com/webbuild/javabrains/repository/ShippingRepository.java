@@ -2,6 +2,7 @@ package com.webbuild.javabrains.repository;
 
 import java.util.List;
 
+import com.webbuild.javabrains.model.Shippers;
 import com.webbuild.javabrains.model.TableObjects;
 import com.webbuild.javabrains.model.User;
 
@@ -16,6 +17,7 @@ public interface ShippingRepository {
 	public void updateTable(User usr);
 	public List<TableObjects> getUserTable(String id);
 	public double[][] collectdata(String collum);
+	public void addPartner(Shippers partner);
 	
 }
 

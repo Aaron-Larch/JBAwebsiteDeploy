@@ -181,11 +181,59 @@ Define Slide object features
 
 /*
 -------------------------------
+Define side navigation features
+-------------------------------
+*/
+ /* The side navigation menu */
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 2; /* Stay on top of all screen elements */
+	top: 0; /* Stay at the top */
+	left: 0;/* Stay at the left */
+	background-color: #111; /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {color: #f1f1f1;}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+} 
+
+
+/*
+-------------------------------
 Define Interactive service objects
 -------------------------------
 */
 
-.mySlides {display:none}/*hide all slides for better control with java script*/
+.myslides {display:none}/*hide all slides for better control with java script*/
  
 /*create dimentions for a badge button object */
 .badge {
@@ -266,7 +314,7 @@ Define Interactive service objects
 	transition: 0.5s;/*declare length of trasision load effect*/
 }
 
-/*define text chargb(64, 0, 64), 64)cs for drop down */
+/*define text charateristics for drop down */
 .dropdown-content p {
 	color: black;
 	padding: 12px 16px;
@@ -285,7 +333,7 @@ footer{
 	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 160px;
+	height: 140px;
 	width: 100%;
 	border-radius: 150px 150px 0 0;
 	background-color: rgba(255, 255, 255, .5);

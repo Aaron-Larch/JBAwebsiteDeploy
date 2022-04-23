@@ -5,8 +5,10 @@
     <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
     <c:set var="contextPath" value="${pageContext.request.contextPath}"/> 
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="ISO-8859-1">
 	<title>Products to Buy.</title>
 	<link rel="stylesheet" href=" https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -27,19 +29,18 @@
 		<spring:url value="${contextPath}/login" var="StartURL" />
 		<a id="LoadFile" href="${StartURL }" class='menuLinks'>Login</a>.
 	</div>
-
+   
 	<div class="headder">
 		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
-  		<div id="menue">
-  			 <h1 id="topBanner" >Some of the products we offer</h1>
+  		<div id="menue" style="overflow: hidden;">
+  			<h1 id="topBanner" >Products We Offer</h1>
 			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
  			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
  		</div>
    		<hr style="background-color:white;"></hr>
 	</div>
 	
-	<div id="test" style="position: relative;">
-	<div id="Placeholder" class="slideshow">
+	<div id="Placeholder" class="slideshow" style="position: relative;">
 		${test}
 		<div id="slider" class="Site_Features_List">
 			<c:forEach var="img" items="${imageUrlList}">  
@@ -48,10 +49,7 @@
 					<p class="SlideText"><span>${fn:substringBefore(img, ".")}</span></p>
 				</div>
 			</c:forEach>
-			<div id="silde" class="ProductSlides">
-				<canvas class="ProductSlides" id="chartSampler"></canvas>
-				<p class="SlideText"><span>Dynamic Charts</span></p>
-			</div>	
+			<canvas class="ProductSlides" id="chartContainer"></canvas>
 		</div>
 		<p>
 			This is a list of all the products we have in our store. To lean more about these wonderful products please click the link below.<br>
@@ -66,10 +64,9 @@
 		<a href="mailto:a.larch@yahoo.com">hege@example.com</a><br>
 		Or call us at 555-444-5678 and we will ignore your questions</p>
 	</footer>
-	</div>
 <script>
-	navAnimate(document.getElementById("mySidenav"));
-	newSetUp(1, ${Arrays.toString(Sample)});
+	//this method is used to hide the backend funktions
+	navAnimateSlide(document.getElementById("mySidenav"), ${Arrays.toString(Sample)});
 </script>
 </body>
 </html>

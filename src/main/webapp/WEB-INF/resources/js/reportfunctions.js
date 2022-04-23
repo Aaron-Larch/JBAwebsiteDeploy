@@ -290,7 +290,7 @@ function currentDiv(n) {
 
 function showDivs(n) {
 	var i;
-	var x = document.getElementsByClassName("mySlides");//set slide list to var
+	var x = document.getElementsByClassName("myslides");//set slide list to var
 	var dots = document.getElementsByClassName("demo");//set dadge list to var
 	if (n > x.length) {slideIndex = 1} //counter reset
 	if (n < 1) {slideIndex = x.length} //set flag so that when hitting back on the fist slide takes you to the last slide
@@ -304,9 +304,10 @@ function showDivs(n) {
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" dotFill", "");
 	}
-	x[slideIndex-1].style.display = "block"; //show selected slide
-	dots[slideIndex-1].className += " dotFill"; //fill animated badge
-	openbox(slideIndex-1);//trigger box animation
+	i=slideIndex-1;
+	x[i].style.display = "block"; //show selected slide
+	dots[i].className += " dotFill"; //fill animated badge
+	openbox(i);//trigger box animation
  
 	//open text box animation
 	function openbox(place) {
@@ -320,6 +321,26 @@ function PageSetUp(sidenav, slideIndex, input){
 	AnimateSlide();
 	showDivs(slideIndex);
 	chartslide(input, "chartContainer");
+	chartslide(input, "chartClone");
+	
+	//This is a two part method to have the sidenav close when the user clicks off the winow
+	$('html').click(function( event) {
+		 var a  = event.target;
+		 var checkopen = sidenav.style.width //Check if sideNav is open
+		 //negate clicking on the menu itself
+		 if(a !== sidenav && checkopen !== "0"){
+			 closeNav(); //  Hide the sidebar
+		 }
+	});
+	
+	$('#Openmenue').click(function(event){
+	    event.stopPropagation(); // prevents executing the above event
+	});
+}
+
+function slideSetUp(sidenav, slideIndex, input){
+	//load Javascript functions for page
+	showDivs(slideIndex);
 	chartslide(input, "chartClone");
 	
 	//This is a two part method to have the sidenav close when the user clicks off the winow
@@ -353,9 +374,21 @@ function PageSetUp(sidenav, slideIndex, input){
 	});
 }
 
- function newSetUp(slideIndex, input){
+ function navAnimateSlide(sidenav, input){
 	//load Javascript functions for page
 	AnimateSlide();
-	showDivs(slideIndex);
-	chartslide(input, "chartSampler");
+	chartslide(input, "chartContainer");
+	//This is a two part method to have the sidenav close when the user clicks off the winow
+	$('html').click(function( event) {
+		 var a  = event.target;
+		 var checkopen = sidenav.style.width //Check if sideNav is open
+		 //negate clicking on the menu itself
+		 if(a !== sidenav && checkopen !== "0"){
+			 closeNav(); //  Hide the sidebar
+		 }
+	});
+	
+	$('#Openmenue').click(function(event){
+	    event.stopPropagation(); // prevents executing the above event
+	});
 }

@@ -115,7 +115,6 @@
 		<div class="clear"></div><br><br>
 		<p  style="text-align:Center;">To contact us for an interview please call us at 111-222-3333 or go to a place that dose not exist</p>
 	</div>
-
 <div class="partners" style="display: none;">
    <table class="table table-striped" id="partners-Table">
    <caption style="caption-side: top;">Here are Some of the shipping companies we work with</caption>
@@ -133,7 +132,6 @@
    </tbody>
   </table>
 </div>
-
 <script>
 	window.onload = function () {loadChannel(".services", ".slideshow", ".partners", ".AboutSite", "Step4");}
 	var slideIndex = 1;	

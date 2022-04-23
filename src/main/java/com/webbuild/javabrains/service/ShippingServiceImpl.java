@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.webbuild.javabrains.Operations.Statistics;
 import com.webbuild.javabrains.jdbc.ExternalConnection;
+import com.webbuild.javabrains.model.Shippers;
 import com.webbuild.javabrains.model.TableObjects;
 import com.webbuild.javabrains.model.User;
 import com.webbuild.javabrains.repository.ShippingRepository;
@@ -131,6 +132,10 @@ public class ShippingServiceImpl implements ShippingRepository {
 		return databox;
 	}
 
+	//insert into Shippers(Companyname, phone, Id.) Values ('object.getCOMPANYNAME', 'object.getPHONE', ect.)
+	@Override
+	public void addPartner(Shippers partner) {ExternalConnection.addPartner(partner);}
+	
 	@Override
 	public void updateTable(User usr) {
 		// TODO Auto-generated method stub

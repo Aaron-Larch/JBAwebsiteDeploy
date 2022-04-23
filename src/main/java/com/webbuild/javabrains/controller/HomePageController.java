@@ -8,18 +8,24 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.webbuild.javabrains.Store;
 import com.webbuild.javabrains.model.Shippers;
 import com.webbuild.javabrains.repository.ShippersRepository;
+import com.webbuild.javabrains.repository.ShippingRepository;
 
 @Controller
 public class HomePageController {
 
 	@Autowired //call data table and all stored functions
 	ShippersRepository shippersservice;
+	
+	@Autowired //call data table and all stored functions
+	private ShippingRepository shippingservice;
 	
 	//Create objects required for the home page
 	@RequestMapping("/HomeLab")
@@ -48,7 +54,13 @@ public class HomePageController {
 
 	@GetMapping("/AboutUs") public String AboutUs() { return "Itd110project/AboutUs";}
 	@GetMapping("/HomePage") public String StartPoint() { return "Itd110project/HomePage";}
-	@GetMapping("/SignUpForm") public String Form() { return "Itd110project/SignUpForm";}
+	
+	@GetMapping("/SignUpForm") public ModelAndView  Form() {
+		ModelAndView model = new ModelAndView();//new server object
+		model.addObject("input", new Shippers());
+		model.setViewName("Itd110project/SignUpForm");
+		return model;
+	}
 	
 	@RequestMapping("/Partners")
     public ModelAndView  DynamicTable() {
@@ -57,6 +69,13 @@ public class HomePageController {
 		model.addObject("partners", Ship);
 		model.setViewName("Itd110project/Partners");//declare page url
         return model;  //go to jsp page
+	}
+	
+	//Update Table Shippers
+	@RequestMapping(value = { "/newPartner"}, method=RequestMethod.POST)
+	public String updatepartners(@ModelAttribute("input") Shippers partnerForm) { //Declare a new partner
+		shippingservice.addPartner(partnerForm); //add new partner to data base
+		return "redirect:/Partners"; //go back to partner webpage
 	}
 	
 	@RequestMapping("/Products")
@@ -93,8 +112,7 @@ public class HomePageController {
 		//populate server object
 		model.addObject("imageUrlList", imageUrlList);
 		model.addObject("discript", discript);
-    	model.addObject("Data", array);
-    	model.addObject("test", "Products and services we offer."); //create message
+    	model.addObject("Sample", array);
     	model.setViewName("Itd110project/ProductIntercation");//declare page url
         return model;  //go to jsp page
     }

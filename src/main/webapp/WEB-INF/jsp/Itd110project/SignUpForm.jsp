@@ -32,26 +32,35 @@
 	<div class="headder">
 		<p><span class="Icon" onclick="openNav()" id="Openmenue">&#9776;</span><p>
   		<div id="menue">
-  			<h1 id="topBanner" >Some of the Companies we work with</h1>
+  			<h1 id="topBanner" >Join our Team</h1>
 			<span style="font-size:30px;">JBA Shipping Inc.</span><br>
  			<span class="c"><small>We Deliver the Best to Deliver You Success</small></span>
  		</div>
    		<hr style="background-color:white;"></hr>
 	</div>
-	<form action="${contextPath}/Partners" method="POST">
+	
+	 <div class="container">
 		<p> Welcome potential applicent and thank you for choosing to work with us at JBC incorperated. 
 		We are eger to start working with you but first we need to know a little bit more About you.
 		Please fill in this form and we will get back to you as soon as possibule.</p>
 
 		<h2>Tell us about you</h2>
-		<fieldset>
-			<legend>Your Information</legend>
-			<ul>
-				<li><lable for="survey">Name:</lable> <input type="text" name="fullname" id="form-name"></li>
-				<li><lable for="survey">Compony Name:</lable> <input type="text" name="componyname" id="form-name"></li>
-				<li><lable for="survey">Address:</lable> <input type="text" name="address" id="form-name"></li>
-				<li><lable for="survey">Office Number:</lable> <input type="text" name="officenumber" id="form-name"></li>
-				<li><lable for="survey">Personal Number:</lable> <input type="text" name="pesonalnumber" id="form-name"></li>
+			<spring:url value="/newPartner" var="partnerForm" />
+			<form:form ModelAttribute="input" method="post" action="${partnerForm}" id="my_form"></form:form>
+			<fieldset>
+				<legend>Your Information</legend>
+				<ul>
+				<li><lable>Name:</lable> <input type="text" name="fullname" placeholder="Your Name" id="form-name"></li>
+				<li>
+					<lable>Compony Name:</lable>
+				 	<form:input type="text"  path="input.companyName" placeholder="Company Name" form="my_form"/>
+				</li>
+				<li><lable>Address:</lable> <input type="text" name="workaddress" placeholder="Address" id="form-name"></li>
+				<li>
+					<lable>Office Number:</lable>
+					<form:input type="text" path="input.address" placeholder="Phone Number" form="my_form"/>
+				</li>
+				<li><lable>Personal Number:</lable> <input type="text" name="pesonalnumber" placeholder="Cell Number" id="form-name"></li>
 			</ul>
 		</fieldset>
 
@@ -102,9 +111,9 @@
 	</select>
 	
 	<fieldset>
-		<p><input type="submit" value="Submit!"><input type="reset">
+		<p><input type="submit" value="Submit!" form="my_form"><input type="reset"form="my_form"></p>
 	</fieldset>
-</form>
+</div>
 <script> navAnimate(document.getElementById("mySidenav"));</script>
 </body>
 </html>
